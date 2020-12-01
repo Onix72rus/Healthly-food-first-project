@@ -22,14 +22,14 @@ function plusSlides (n) {
 
 function hideSlidesContent () {
    slides.forEach (item => {
-      item.classList.add('hide');
+      item.classList.add('hide', 'fade');
       item.classList.remove('show', 'fade');
    });
 }
 
-function showSlidesContent (slideIndex) {
-   slides[slideIndex].classList.remove('hide');
-   slides[slideIndex].classList.add('show', 'fade');
+function showSlidesContent (i) {
+   slides[i].classList.remove('hide', 'fade');
+   slides[i].classList.add('show', 'fade');
 }
 
 hideSlidesContent();
