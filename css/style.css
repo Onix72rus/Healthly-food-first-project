@@ -294,7 +294,7 @@ body {
   background-image: linear-gradient(to top right, #6d839c, #6588ac, #5d8cbc, #5491cb, #4c95db, #449aeb, #4da3d9, #57acc7, #60b5b6, #69bda4, #73c692, #7ccf80);
 }
 
-.reviews__btn {
+.slider__btn {
   font-size: 0;
   color: transparent;
   position: absolute;
@@ -303,7 +303,7 @@ body {
   transform: translateY(-50%);
 }
 
-.reviews__btn:after {
+.slider__btn:after {
   content: "";
   display: block;
   width: 30px;
@@ -312,12 +312,12 @@ body {
   border-left: 4px solid #fff;
 }
 
-.reviews__btn--prev {
+.slider__btn--prev {
   left: 40px;
   transform: rotate(-45deg);
 }
 
-.reviews__btn--next {
+.slider__btn--next {
   right: 40px;
   transform: rotate(135deg);
 }

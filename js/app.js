@@ -1,13 +1,10 @@
 window.addEventListener('DOMContentLoaded', function() {
 // Slider
 
-let slideIndex = 1;
+let slideIndex = 0;
 const slides = document.querySelectorAll('[data-slider]'),
-      prev = document.querySelector('.reviews__btn--prev'),
-      next = document.querySelector('.reviews__btn--next');
-
-showSlides(slideIndex);
-
+      prev = document.querySelector('.slider__btn--prev'),
+      next = document.querySelector('.slider__btn--next');
 
 function showSlides (n) {
    if(n > slides.length) {
@@ -17,25 +14,70 @@ function showSlides (n) {
    if(n < 1) {
       slideIndex = slides.length;
    }
-
-   slides.forEach((item) => item.style.display = 'none');
-
-   slides[slideIndex - 1].style.display = 'block';
 }
 
 function plusSlides (n) {
    showSlides(slideIndex +=n);
 }
 
+function hideSlidesContent () {
+   slides.forEach (item => {
+      item.classList.add('hide');
+      item.classList.remove('show', 'fade');
+   });
+}
+
+function showSlidesContent (slideIndex) {
+   slides[slideIndex].classList.remove('hide');
+   slides[slideIndex].classList.add('show', 'fade');
+}
+
+hideSlidesContent();
+showSlidesContent(slideIndex);
+
 prev.addEventListener('click', function(event){
    event.preventDefault();
    plusSlides(-1);
+   hideSlidesContent();
+   showSlidesContent(slideIndex);
 });
 
 next.addEventListener('click', function(event){
    event.preventDefault();
    plusSlides(1);
+   hideSlidesContent();
+   showSlidesContent(slideIndex);
 });
+
+//showSlides(slideIndex);
+
+//function showSlides (n) {
+//   if(n > slides.length) {
+//      slideIndex = 1;
+//   }
+
+//   if(n < 1) {
+//      slideIndex = slides.length;
+//   }
+
+//   slides.forEach((item) => item.style.display = 'none');
+
+//   slides[slideIndex - 1].style.display = 'block';
+//}
+
+//function plusSlides (n) {
+//   showSlides(slideIndex +=n);
+//}
+
+//prev.addEventListener('click', function(event){
+//   event.preventDefault();
+//   plusSlides(-1);
+//});
+
+//next.addEventListener('click', function(event){
+//   event.preventDefault();
+//   plusSlides(1);
+//});
 
 // Tabs 
 
