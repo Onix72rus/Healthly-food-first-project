@@ -25,62 +25,82 @@
          <a href="#" class="nav__link">Контакты</a>
       </nav>
    </div>
-</header> <!-- /Header -->
-   <!-- Intro -->
-<div class="intro">
-   <a class="slider__btn slider__btn--prev" href="">prev</a>
-   <a class="slider__btn slider__btn--next" href="">next</a>
+</header>
 
-   <div data-slider class="intro__slider">
-      <div class="container">
-         <div class="intro__slider--inner">
-            <div class="intro__slider--content">
-               <h1 class="intro__title">Доставка здорового питания в Тюмени</h1>
-               <div class="intro__text">Поставь цель и подбери индивидуальный рацион</div>
-               <button class="btn__intro--slider">Хочу это меню</button>
+<!--Slider-->
+<div class="container">
+   <div class="offer__inner">
+
+      <div class="offer__slider">
+         <div class="offer__slider-counter">
+            <div class="offer__slider-prev">
+                  <img src="icons/left.svg" alt="prev">
+            </div>
+            <span id="current">03</span>
+            /
+            <span id="total">04</span>
+            <div class="offer__slider-next">
+                  <img src="icons/right.svg" alt="next">
+            </div>
+         </div>
+         <div class="offer__slider-wrapper">
+            <div class="offer__slider-inner">
+               <div class="offer__slide">
+                  <img src="img/slider/pepper.jpg" alt="pepper">
+            </div>
+            <div class="offer__slide">
+                  <img src="img/slider/food-12.jpg" alt="food">
+            </div>
+            <div class="offer__slide">
+                  <img src="img/slider/olive-oil.jpg" alt="oil">
+            </div>
+            <div class="offer__slide">
+                  <img src="img/slider/paprika.jpg" alt="paprika">
+            </div>
             </div>
          </div>
       </div>
-         <img class="img__bottle" src="img/intro-slider/1/bottle.png" alt="#">
-         <img class="img__arrow" src="img/intro-slider/1/Прямая стрелка.png" alt="#">
-         <h4 class="detox__text">Detox "Ананасовай Витграс"</h4>
-
-         <img class="img__salmon" src="img/intro-slider/1/Семга.png" alt="#">
-         <img class="img__arrow--2" src="img/intro-slider/1/Косая стрелка.png" alt="#">
-         <h4 class="salmon__text">"Семга с рисом"</h4>
-
-         <img class="img__porridge" src="img/intro-slider/1/Каша.png" alt="#">
-         <img class="img__arrow--3" src="img/intro-slider/1/Косая стрелка.png" alt="#">
-         <h4 class="porridge__text">"Каша с кусочками ананаса"</h4>
-   </div>
-
-   <div data-slider class="intro__slider intro__slider-2">
-      <div class="container">
-         <div class="intro__slider--inner">
-            <div class="intro__slider--content">
-               <h2 class="intro__title">Время – самый ценный ресурс</h2>
-               <div class="intro__text">Посвятите его себе, а готовку предоставьте нам</div>
-               <button class="btn__intro--slider">Хочу экономить время</button>
-            </div>
-         </div>
+      <div class="offer__advantages">
+         <h2 class="slider__title"><span>Доставка правильной</span> еды на каждый день</h2>
+         <h3 class="slider__text">Питание с научным подходом</h3>
+         <button class="btn" data-modal>Подобрать программу</button>
+         <img class="slider__prev--img" src="img/slider/_1.png" alt="#">
       </div>
-      <img class="img__slide-2" src="img/intro-slider/2/Group_458.png" alt="">
    </div>
+</div>
+ <!--/Slider-->
 
-   <div data-slider class="intro__slider intro__slider-3">
-      <div class="container">
-         <div class="intro__slider--inner">
-            <div class="intro__slider--content">
-               <h2 class="intro__title">Создайте тело своей мечты</h2>
-               <div class="intro__text">Питайтесь здоровыми рационами ProFood</div>
-               <button class="btn__intro--slider">Хочу тело мечты</button>
-            </div>
+<!-- Features -->
+<div class="container">
+   <div class="featurex__title">Как всё происходит</div>
+   <div class="features">
+         <div class="features__item">
+            <img class="features__icon" src="img/features/img-1.gif" alt="">
+            <div class="features__text">
+               Вы выбираете и заказываете подходящий рацион питания</div>
          </div>
-      </div>
-      <img class="img__slide-2" src="img/intro-slider/3/_1.png" alt="">
-   </div>
-</div> <!-- /Intro -->
 
+         <div class="features__item">
+            <img class="features__icon" src="img/features/img-2.gif" alt="">
+            <div class="features__text">
+               Мы готовим блюда из свежих и качественных продуктов</div>
+         </div>
+
+         <div class="features__item">
+            <img class="features__icon" src="img/features/img-3.gif" alt="">
+            <div class="features__text">
+               Каждые 2 дня мы доставляем рационы до ваших дверей</div>
+         </div>
+
+         <div class="features__item">
+            <img class="features__icon" src="img/features/img-4.gif" alt="">
+            <div class="features__text">
+               Вы достигаете поставленных целей и результатов</div>
+         </div>
+   </div>
+</div>
+
+<!--Tab-->
 <div class="preview">
    <div class="bgc_blue"></div>
    <div class="container">
@@ -88,39 +108,280 @@
            <div class="tabcontent">
                <img src="img/previevs/1.jpg" alt="vegy">
                <div class="tabcontent__descr">
-                   Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Для людей, которые интересуются спортом; активных и здоровых. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!
+                   Меню "Sport" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Для людей, которые интересуются спортом; активных и здоровых. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!
                </div>
            </div>
            <div class="tabcontent">
                <img src="img/previevs/2.jpg" alt="elite">
                <div class="tabcontent__descr">
-                   Меню “Премиум” - мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!                                     
+                   Меню “Life” - мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!                                     
                </div>
            </div>
            <div class="tabcontent">
                <img src="img/previevs/3.jpg" alt="post">
                <div class="tabcontent__descr">
-                   Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все будет Ом!                                     
+                   Наше специальное “Veg-menu” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все будет Ом!                                     
                </div>
            </div>
            <div class="tabcontent">
                <img src="img/previevs/4.jpg" alt="vegy">
                <div class="tabcontent__descr">
-                   Меню "Сбалансированное" - это соответствие вашего рациона всем научным рекомендациям. Мы тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.
+                   Меню "Fit" - это соответствие вашего рациона всем научным рекомендациям. Мы тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.
                </div>
            </div>
            <div class="tabheader">
                <h3>Выберите стиль питания</h3>
                <div class="tabheader__items">
-                   <div class="tabheader__item tabheader__item_active">Фитнес</div>
-                   <div class="tabheader__item">Премиум</div>
-                   <div class="tabheader__item">Постное</div>
-                   <div class="tabheader__item">Сбалансированное</div>
+                   <div class="tabheader__item tabheader__item_active">SPORT</div>
+                   <div class="tabheader__item">LIFE</div>
+                   <div class="tabheader__item">VEG</div>
+                   <div class="tabheader__item">FIT</div>
                </div>
            </div>
        </div>
    </div>
 </div>
+<!--/Tab-->
+
+<!--Calc-->
+<div class="calculating">
+   <div class="container">
+       <h2 class="title">Рассчитаем вашу потребность в калориях?
+       </h2>
+       <div class="calculating__field">
+           <div class="calculating__subtitle">
+               Ваш пол
+           </div>
+           <div class="calculating__choose" id="gender">
+               <div id="female" class="calculating__choose-item calculating__choose-item_active">Женщина</div>
+               <div id="male" class="calculating__choose-item">Мужчина</div>
+           </div>
+
+           <div class="calculating__subtitle">
+               Ваша конституция
+           </div>
+           <div class="calculating__choose calculating__choose_medium">
+               <input type="text" id="height" placeholder="Введите рост" class="calculating__choose-item calculating__input">
+               <input type="text" id="weight" placeholder="Введите вес"  class="calculating__choose-item calculating__input">
+               <input type="text" id="age" placeholder="Введите возраст" class="calculating__choose-item calculating__input">
+           </div>
+
+           <div class="calculating__subtitle">
+               Выберите вашу физическая активность
+           </div>
+           <div class="calculating__choose calculating__choose_big">
+               <div data-ratio="1.2" id="low" class="calculating__choose-item">Низкая активность </div>
+               <div data-ratio="1.375" id="small"  class="calculating__choose-item calculating__choose-item_active">Невысокая активность</div>
+               <div data-ratio="1.55" id="medium" class="calculating__choose-item">Умеренная активность</div>
+               <div data-ratio="1.725" id="high" class="calculating__choose-item">Высокая активность</div>
+           </div>
+
+           <div class="calculating__divider"></div>
+
+           <div class="calculating__total">
+               <div class="calculating__subtitle">
+                   Ваша суточная норма калорий:
+               </div>
+               <div class="calculating__result">
+                   <span>2700</span> ккал
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="divider"></div>
+<!--/Calc-->
+
+<!--Tab__menu-->
+
+<div class="calories">
+   <div data-ratio="1200" id="low__calories" class="calories__btn calculating__choose-item_active">
+      1200
+      <div class="calories__text">Калорий<br>больше или меньше</div></div>
+   <div data-ratio="1500" id="small__calories" class="calories__btn">
+      1500
+      <div class="calories__text">Калорий<br> или больше</div></div>
+   <div data-ratio="2000" id="medium__calories" class="calories__btn">
+      2000
+      <div class="calories__text">Калорий<br> или больше</div></div>
+   <div data-ratio="2500" id="high__calories" class="calories__btn">
+      2500
+      <div class="calories__text">Калорий<br> или больше</div></div>
+</div>
+
+<div class="tabs">
+   <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+   <label class="tab__btn-1" for="tab-btn-1">
+      <h4>Sport</h4>
+      <h5>Простое<br>и правильное</h5>
+   </label>
+   <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+   <label class="tab__btn-1" for="tab-btn-2">
+      <h4>Fit</h4>
+      <h5>Правильное<br>и разнообразное</h5>
+   </label>
+   <input type="radio" name="tab-btn" id="tab-btn-3" value="" >
+   <label class="tab__btn-1" for="tab-btn-3">
+      <h4>Life</h4>
+      <h5>Премиальное<br> и здоровое</h5>
+   </label>
+   <input type="radio" name="tab-btn" id="tab-btn-4" value="">
+   <label class="tab__btn-1" for="tab-btn-4">
+      <h4>Veg</h4>
+      <h5>Вегитарианское<br>питание</h5>
+   </label>
+
+
+   <div id="content-1">
+      <h3 class="menu__title">Ваше меню:</h3>
+      <h4 class="menu__price">SPORT 1 НЕДЕЛЯ
+         <span>1 131 ₽/ день</span></h4>
+      <div class="menu__example">Пример на день
+         <span>5 приемов / 7 блюд</span></div>
+      <div class="example">
+         <div class="example__item">
+            <img class="example__img" src="img/example/Sport/Борщ со свежей капустой с куриным филе.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Sport/Говядина-в-сливочно-томатном-соусе-с-грибами-и-спагетти-отварные.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Sport/Говядина-нашпигованная-и-рис-с-шафраном-под-сметанно-огуречным-соусом.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Sport/Омлет-с-курицей-и-сыром.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Sport/Пирог картофельный.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Sport/Детокс ягодный.png" alt="">
+         </div>
+      </div>
+      <div class="delivery__sport">Доставка пн-ср-пт в любой двухчасовой интервал с 6 до 12 утра</div>
+      <div class="clarification">Питание с понедельника по субботу</div>
+      <div class="price">Итого 6 дней<span>5649 ₽</span></div>
+      <button class="btn btn__example" data-modal>Заказать</button>
+   </div>
+
+   <div id="content-2">
+      <h3 class="menu__title">Ваше меню:</h3>
+      <h4 class="menu__price">FIT 1 НЕДЕЛЯ
+         <span>1 321 ₽/ день</span></h4>
+      <div class="menu__example">Пример на день
+         <span>5 приемов / 7 блюд</span></div>
+      <div class="example">
+         <div class="example__item">
+            <img class="example__img" src="img/example/Fit/Том-ям.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Fit/Цезарь-с-красной-рыбой.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Fit/Курица-терияки-и-фунчоза.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Fit/Сэндвич-с-творожным-сыром-и-ананасом.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Fit/Чахохблили-из-говядины-и-рис-отварной.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Fit/Пудинг-с-фруктовыми-дольками.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Fit/Ягодный-смузи-шейк.png" alt="">
+         </div>
+      </div>
+      <div class="delivery__sport">Доставка пн-ср-пт в любой двухчасовой интервал с 6 до 12 утра</div>
+      <div class="clarification">Питание с понедельника по субботу</div>
+      <div class="price">Итого 5 дней<span>6 603 ₽</span></div>
+      <button class="btn btn__example" data-modal>Заказать</button>
+   </div>
+
+   <div id="content-3">
+      <h3 class="menu__title">Ваше меню:</h3>
+      <h4 class="menu__price">LIFE 1 НЕДЕЛЯ
+         <span>2 090 ₽/ день</span></h4>
+      <div class="menu__example">Пример на день
+         <span>4 приема / 5 блюд</span></div>
+      <div class="example">
+         <div class="example__item">
+            <img class="example__img" src="img/example/Life/Том-ям.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Life/Салат-с-кукурузой,-куриным-филе-и-голландским-сыром.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Life/Куриные-ножки-в-горчично-соевом-маринаде-min.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Life/Индейка-в-йогуртовом-маринаде-с-тыквой-min.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Life/Тирамису.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Life/Томатный-фестиваль.png" alt="">
+         </div>
+      </div>
+      <div class="delivery__sport">Доставка пн-ср-пт в любой двухчасовой интервал с 6 до 12 утра</div>
+      <div class="clarification">Питание с понедельника по субботу</div>
+      <div class="price">Итого 5 дней<span>10 450 ₽</span></div>
+      <button class="btn btn__example" data-modal>Заказать</button>
+   </div>
+
+   <div id="content-4">
+      <h3 class="menu__title">Ваше меню:</h3>
+      <h4 class="menu__price">VEG 1 НЕДЕЛЯ
+         <span>1 615 ₽/ день</span></h4>
+      <div class="menu__example">Пример на день
+         <span>5 приемов / 6 блюд</span></div>
+      <div class="example">
+         <div class="example__item">
+            <img class="example__img" src="img/example/Veg/Крем-суп-кукурузный-с-гренками.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Veg/Блины-омлетные-с-сыром-творожным.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Veg/Желе-из-груши-с-апельсином.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Veg/Каша овсяная с бананом.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Veg/Каша-5-злаков-с-лесными-ягодами.png" alt="">
+         </div>
+         <div class="example__item">
+            <img class="example__img" src="img/example/Veg/Напиток вишневый.png" alt="">
+         </div>
+      </div>
+      <div class="delivery__sport">Доставка пн-ср-пт в любой двухчасовой интервал с 6 до 12 утра</div>
+      <div class="clarification">Питание с понедельника по субботу</div>
+      <div class="price">Итого 5 дней<span>8 075 ₽</span></div>
+      <button class="btn btn__example" data-modal>Заказать</button>
+   </div>
+
+ </div>
+<!--/Tab__menu-->
+
+<!--Modal-->
+<div class="modal">
+   <div class="modal__dialog">
+       <div class="modal__content">
+         <form class="box" action="#">
+            <div data-close class="modal__close">&times;</div>
+            <div class="modal__title">Введите свои данные и мы свяжемся с Вами!</div>
+            <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
+            <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+            <button type="submit" name="submit" value="submit">Перезвонить мне</button>
+          </form>
+       </div>
+   </div>
+</div>
+<!--/Modal-->
+
    <script src="js/app.js"></script>
 </body>
 </html>

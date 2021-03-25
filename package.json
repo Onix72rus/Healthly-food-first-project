@@ -1,0 +1,22 @@
+{
+  "name": "first_progect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Onix72rus/Healthly-food-first-project.git"
+  },
+  "author": "Vladimir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Onix72rus/Healthly-food-first-project/issues"
+  },
+  "homepage": "https://github.com/Onix72rus/Healthly-food-first-project#readme",
+  "devDependencies": {
+    "json-server": "^0.16.3"
+  }
+}

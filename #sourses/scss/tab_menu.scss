@@ -1,0 +1,242 @@
+.calories {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 40px 0 20px 0;
+   background: rgba(146, 242, 255, 0.15);
+}
+
+.calories__text {
+   font-size: 11px;
+   font-weight: 400;
+   text-align: left;
+   color: #5e5e5e;
+   line-height: 1.2;
+   margin-left: 20px;
+   margin-bottom: 10px;
+}
+
+.calories__btn {
+   align-items: center;
+   justify-content: center;
+   width: 250px;
+   height: 58px;
+   margin-left: 10px;
+   background: #FFFFFF;
+   color: #5e5e5e;
+   box-shadow: 0px 4px 15px rgb(0 0 0 / 20%);
+   border: none;
+   text-align: center;
+   font-size: 20px;
+   font-weight: 700;
+   cursor: pointer;
+   outline: none;
+   transition: .3s all;
+   border-radius: 17px;
+
+
+   &:first-child {
+      margin-left: 0;
+   }
+
+   span {
+      font-size: 10px;
+   }
+}
+
+.calculating__choose-item_active {
+   color: #5e5e5e;
+   background-color: #54ED39;
+}
+
+
+
+.tabs {
+   width: 100%;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 7vh;
+   padding-bottom: 100px;
+   overflow: hidden;
+   background: rgba(146, 242, 255, 0.15);
+ }
+
+ .tabs>input[type="radio"] {
+   display: none;
+ }
+
+ .tabs>input[type="radio"]:checked+label {
+   background-color: #54ED39;
+ }
+
+ .tabs>div {
+   /* скрыть контент по умолчанию */
+   display: none;
+   border: 1px solid #eee;
+   padding: 40px;
+   border-radius: 15px;
+   width: 550px;
+   margin: 0 auto;
+   margin-top: 50px;
+   background-color: rgba(159, 194, 199, 0.667);
+ }
+
+ /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+ #tab-btn-1:checked~#content-1,
+ #tab-btn-2:checked~#content-2, 
+ #tab-btn-3:checked~#content-3, 
+ #tab-btn-4:checked~#content-4 {
+   display: block;
+ }
+
+ .tabs>label {
+   display: inline-block;
+   text-align: center;
+   vertical-align: middle;
+   user-select: none;
+   background-color: #f0f0f0;
+   box-shadow: 0px 4px 15px rgb(0 0 0 / 30%);
+   border: 1px solid transparent;
+   padding: 2px 8px;
+   font-size: 16px;
+   line-height: 1.5;
+   border-radius: 17px;
+   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+   margin-left: 6px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   width: 250px;
+ }
+
+ .tabs>label:first-of-type {
+   margin-left: 0;
+ }
+
+ .tab__btn-1 h4 {
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 18px;
+   color: #5e5e5e;
+}
+
+ .tab__btn-1 h5 {
+   font-size: 11px;
+   font-weight: 400;
+   text-align: left;
+   color: #5e5e5e;
+   line-height: 1.2;
+   margin-left: 10px;
+ }
+
+ .menu__title {
+   font-size: 24px;
+   font-weight: 700;
+   text-align: start;
+   color: #000;
+   margin-bottom: 20px;
+ }
+
+ .menu__price {
+    display: flex;
+    justify-content: space-between;
+   font-size: 18px;
+   font-weight: 700;
+   color: #000;
+   text-align: start;
+   margin-bottom: 25px;
+ }
+
+ .menu__price span {
+   font-size: 18px;
+   font-weight: 700;
+   color: #000;
+   text-align: right;
+ }
+
+ .menu__example {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    font-weight: 400;
+    color: #5e5e5e;
+    margin-bottom: 25px;
+ }
+
+ .example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #5e5e5e;
+    padding-bottom: 25px;
+ }
+
+ .example__item {
+   flex: 1 0;
+   max-width: 12%;
+   margin-left: .8rem;
+   cursor: pointer;
+   transition: opacity .1s ease-in-out;
+ }
+ 
+ .example__img {
+   display: block;
+   width: 100%;
+ }
+
+ .delivery__sport {
+    font-size: 14px;
+    font-weight: 400;
+    color: #5e5e5e;
+    text-align: left;
+    margin: 25px 0;
+ }
+
+.clarification {
+   font-size: 14px;
+   font-weight: 400;
+   color: #000;
+   text-align: left;
+   padding-bottom: 25px;
+   border-bottom: 1px solid #5e5e5e;
+}
+
+.price {
+   display: flex;
+   justify-content: space-between;
+   font-size: 16px;
+   font-weight: 700;
+   color: #000;
+   margin: 25px 0;
+}
+
+.btn__example {
+   padding-right: 100px;
+   padding-left: 100px;
+   font-size: 18px;
+}
+
+#content-2 {
+   background-color: #c8ffb8;
+}
+
+#content-3 {
+   background-color: #e0c2ff;
+}
+
+#content-4 {
+   background-color: #dcff9c;
+}
+
+.tabs>input#tab-btn-1:checked+label {
+   background-color: rgba(159, 194, 199, 0.667);
+ }
+.tabs>input#tab-btn-2:checked+label {
+   background-color: #c8ffb8;
+ }
+.tabs>input#tab-btn-3:checked+label {
+   background-color: #e0c2ff;
+ }
+.tabs>input#tab-btn-4:checked+label {
+   background-color: #dcff9c;
+ }
