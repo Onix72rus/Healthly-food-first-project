@@ -44,14 +44,14 @@ const tabs = document.querySelectorAll ('.tabheader__item'),
       let slideIndex = 1;
   
       const slides = document.querySelectorAll('.offer__slide'),
-          slider = document.querySelector('.offer__slider'),
-          prev = document.querySelector('.offer__slider-prev'),
-          next = document.querySelector('.offer__slider-next'),
-          total = document.querySelector('#total'),
-          current = document.querySelector('#current'),
-          slidesWrapper = document.querySelector('.offer__slider-wrapper'),
-          width = window.getComputedStyle(slidesWrapper).width,
-          slidesField = document.querySelector('.offer__slider-inner');
+            slider = document.querySelector('.offer__slider'),
+            prev = document.querySelector('.offer__slider-prev'),
+            next = document.querySelector('.offer__slider-next'),
+            total = document.querySelector('#total'),
+            current = document.querySelector('#current'),
+            slidesWrapper = document.querySelector('.offer__slider-wrapper'),
+            width = window.getComputedStyle(slidesWrapper).width,
+            slidesField = document.querySelector('.offer__slider-inner');
   
       if (slides.length < 10) {
           total.textContent = `0${slides.length}`;
@@ -220,6 +220,7 @@ const result = document.querySelector('.calculating__result span');
          } else {
             result.textContent = Math.round((88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age)) * ratio);
          }
+
       }
 
       calcTotal();
@@ -267,6 +268,8 @@ const result = document.querySelector('.calculating__result span');
 
       getStaticInformation('#gender div', 'calculating__choose-item_active');
       getStaticInformation('.calculating__choose_big div', 'calculating__choose-item_active');
+      getStaticInformation('.calories__btn', 'calculating__choose-item_active');
+
 
       function getDynamicInformation(selector) {
          const input = document.querySelector(selector);
@@ -299,8 +302,7 @@ const result = document.querySelector('.calculating__result span');
 
     //Modal
 
-const btn = document.querySelectorAll ('[data-modal]'),
-            modal = document.querySelector ('.modal');
+const modal = document.querySelector ('.modal');
 
       function openModal () {
          modal.classList.add ('show', 'fadeModal');
@@ -309,10 +311,6 @@ const btn = document.querySelectorAll ('[data-modal]'),
          clearInterval (timerID);
          window.removeEventListener ('scroll', showModalByScroll);
       }
-
-      btn.forEach (item => {
-         item.addEventListener ('click', openModal);
-      });
 
       function closeModal () {
             modal.classList.add ('hide');
@@ -350,7 +348,7 @@ const forms = document.querySelectorAll('form');
 const formMessage = {
    loading: 'img/spinner.svg',
    success: 'Спасибо! Мы скоро свяжемся с Вами!',
-   errorr: 'Что то пошло не так'
+   errorr: 'Что то пошло не так :('
 };
 
       forms.forEach (item => {
@@ -426,5 +424,132 @@ function showThanksModal (message) {
       closeModal ();
    }, 4000);
 }
+
+      //CardMenu
+
+class MenuCard {
+   constructor(id, menuPrice, menuExample, srcOne, srcTwo, srcThree, srcFour, srcFive, price, parentSelector) {
+      this.id = id;
+      this.menuPrice = menuPrice;
+      this.menuExample = menuExample;
+      this.srcOne = srcOne;
+      this.srcTwo = srcTwo;
+      this.srcThree = srcThree;
+      this.srcFour = srcFour;
+      this.srcFive = srcFive;
+      this.price = price;
+      this.parent = document.querySelector(parentSelector);
+      this.openModal = document.querySelectorAll ('[data-modal]');
+      this.openBtn ();
+   }
+
+   openBtn () {
+      this.openModal.forEach(item => {
+            item.addEventListener('click', () => {
+               openModal();
+            });
+         });
+   }
+
+   render() {
+      const element = document.createElement('div');
+      element.classList.add("menu__item");
+      element.id = `${this.id}`;
+      element.innerHTML = `
+               <h3 class="menu__title">Ваше меню:</h3>
+               <h4 class="menu__price">${this.menuPrice}</h4>
+               <div class="menu__example">${this.menuExample}</div>
+               <div class="example">
+                  <div class="example__item">
+                     <img class="example__img" src=${this.srcOne} alt="#">
+                  </div>
+                  <div class="example__item">
+                     <img class="example__img" src=${this.srcTwo} alt="#">
+                  </div>
+                  <div class="example__item">
+                     <img class="example__img" src=${this.srcThree} alt="#">
+                  </div>
+                  <div class="example__item">
+                     <img class="example__img" src=${this.srcFour} alt="#">
+                  </div>
+                  <div class="example__item">
+                     <img class="example__img" src=${this.srcFive} alt="#">
+                  </div>
+               </div>
+               <div class="delivery">Доставка пн-ср-пт в любой двухчасовой интервал с 6 до 12 утра</div>
+               <div class="clarification">Питание с понедельника по субботу</div>
+               <div class="price">${this.price}</div>
+               <button class="btn btn__example" data-modal>Заказать</button>
+      `;
+      this.parent.append(element);
+   }
+   
+}
+
+new MenuCard (
+   "content-1",
+   'SPORT 1 НЕДЕЛЯ<span>1 131 ₽/ день</span>',
+   'Пример на день<span>5 приемов / 7 блюд</span>',
+   '"img/example/Sport/Борщ со свежей капустой с куриным филе.png"',
+   '"img/example/Sport/Говядина-в-сливочно-томатном-соусе-с-грибами-и-спагетти-отварные.png"',
+   '"img/example/Sport/Говядина-нашпигованная-и-рис-с-шафраном-под-сметанно-огуречным-соусом.png"',
+   '"img/example/Sport/Омлет-с-курицей-и-сыром.png"',
+   '"img/example/Sport/Детокс ягодный.png"',
+   'Итого 6 дней<span>5649 ₽</span>',
+   ".tabs"
+).render();
+
+
+new MenuCard (
+   "content-2",
+   'FIT 1 НЕДЕЛЯ<span>1 321 ₽/ день</span>',
+   'Пример на день<span>5 приемов / 7 блюд</span>',
+   '"img/example/Fit/Том-ям.png"',
+   '"img/example/Fit/Цезарь-с-красной-рыбой.png"',
+   '"img/example/Fit/Курица-терияки-и-фунчоза.png"',
+   '"img/example/Fit/Сэндвич-с-творожным-сыром-и-ананасом.png"',
+   '"img/example/Fit/Ягодный-смузи-шейк.png"',
+   'Итого 6 дней<span>5649 ₽</span>',
+   ".tabs"
+).render();
+
+new MenuCard (
+   "content-3",
+   'LIFE 1 НЕДЕЛЯ<span>2 090 ₽/ день</span>',
+   'Пример на день<span>4 приема / 5 блюд',
+   '"img/example/Life/Том-ям.png"',
+   '"img/example/Life/Салат-с-кукурузой,-куриным-филе-и-голландским-сыром.png"',
+   '"img/example/Life/Куриные-ножки-в-горчично-соевом-маринаде-min.png"',
+   '"img/example/Life/Индейка-в-йогуртовом-маринаде-с-тыквой-min.png"',
+   '"img/example/Life/Тирамису.png"',
+   'Итого 5 дней<span>10 450 ₽',
+   ".tabs"
+).render();
+
+new MenuCard (
+   "content-4",
+   'VEG 1 НЕДЕЛЯ<span>1 615 ₽/ день</span>',
+   'Пример на день<span>5 приемов / 6 блюд</span>',
+   '"img/example/Veg/Крем-суп-кукурузный-с-гренками.png"',
+   '"img/example/Veg/Блины-омлетные-с-сыром-творожным.png"',
+   '"img/example/Veg/Желе-из-груши-с-апельсином.png"',
+   '"img/example/Veg/Каша-5-злаков-с-лесными-ягодами.png"',
+   '"img/example/Veg/Напиток вишневый.png"',
+   'Итого 5 дней<span>8 075 ₽',
+   ".tabs"
+).render();
+
+new MenuCard (
+   "content-5",
+   'VEG 1 НЕДЕЛЯ<span>1 615 ₽/ день</span>',
+   'Пример на день<span>5 приемов / 6 блюд</span>',
+   '"img/example/Veg/Крем-суп-кукурузный-с-гренками.png"',
+   '"img/example/Veg/Блины-омлетные-с-сыром-творожным.png"',
+   '"img/example/Veg/Желе-из-груши-с-апельсином.png"',
+   '"img/example/Veg/Каша-5-злаков-с-лесными-ягодами.png"',
+   '"img/example/Veg/Напиток вишневый.png"',
+   'Итого 5 дней<span>8 075 ₽',
+   ".tabs"
+).render();
 
 });

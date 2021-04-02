@@ -574,7 +574,7 @@ element.style {
   width: 250px;
   height: 58px;
   margin-left: 10px;
-  background: #FFFFFF;
+  background-color: #f0f0f0;
   color: #5e5e5e;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   border: none;
@@ -633,7 +633,8 @@ element.style {
 #tab-btn-1:checked ~ #content-1,
 #tab-btn-2:checked ~ #content-2,
 #tab-btn-3:checked ~ #content-3,
-#tab-btn-4:checked ~ #content-4 {
+#tab-btn-4:checked ~ #content-4,
+#tab-btn-5:checked ~ #content-5 {
   display: block;
 }
 
@@ -732,7 +733,7 @@ element.style {
   width: 100%;
 }
 
-.delivery__sport {
+.delivery {
   font-size: 14px;
   font-weight: 400;
   color: #5e5e5e;
@@ -765,11 +766,11 @@ element.style {
 }
 
 #content-2 {
-  background-color: #c8ffb8;
+  background-color: #e0c2ff;
 }
 
 #content-3 {
-  background-color: #e0c2ff;
+  background-color: #c8ffb8;
 }
 
 #content-4 {
@@ -781,11 +782,11 @@ element.style {
 }
 
 .tabs > input#tab-btn-2:checked + label {
-  background-color: #c8ffb8;
+  background-color: #e0c2ff;
 }
 
 .tabs > input#tab-btn-3:checked + label {
-  background-color: #e0c2ff;
+  background-color: #c8ffb8;
 }
 
 .tabs > input#tab-btn-4:checked + label {
@@ -818,7 +819,7 @@ element.style {
   text-align: center;
   border: 2px solid #3498db;
   padding: 14px 10px;
-  width: 200px;
+  width: 220px;
   outline: none;
   color: white;
   border-radius: 20px;
@@ -838,7 +839,7 @@ element.style {
   text-align: center;
   font-size: 14px;
   font-weight: 700;
-  border: 2px solid #2ecc71;
+  border: 2px solid #54ED39;
   padding: 14px 40px;
   outline: none;
   color: #5e5e5e;
@@ -848,7 +849,7 @@ element.style {
 }
 
 .box button[type=submit]:hover {
-  background: #2ecc71;
+  background: #54ED39;
   color: #000;
 }
 
@@ -893,7 +894,7 @@ element.style {
 .modal__title {
   text-align: center;
   font-size: 22px;
-  text-transform: uppercase;
+  color: #5e5e5e;
 }
 
 .show {

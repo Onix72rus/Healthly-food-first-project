@@ -24,7 +24,7 @@
    text-align: center;
    border: 2px solid #3498db;
    padding: 14px 10px;
-   width: 200px;
+   width: 220px;
    outline: none;
    color: white;
    border-radius: 20px;
@@ -44,7 +44,7 @@
    text-align: center;
    font-size: 14px;
    font-weight: 700;
-   border: 2px solid #2ecc71;
+   border: 2px solid #54ED39;
    padding: 14px 40px;
    outline: none;
    color: #5e5e5e;
@@ -54,7 +54,7 @@
  }
 
  .box button[type = "submit"]:hover{
-   background: #2ecc71;
+   background: #54ED39;
    color: #000;
  }
 
@@ -98,7 +98,7 @@
    &__title {
        text-align: center;
        font-size: 22px;
-       text-transform: uppercase;
+       color: #5e5e5e;
    }
 
 }

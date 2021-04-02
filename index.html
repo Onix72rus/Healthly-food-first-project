@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,8 @@
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-   <!-- Header -->
+
+<!--Header -->
 <header class="header">
    <div class="header__inner">
       <div class="header__logo">
@@ -26,6 +27,7 @@
       </nav>
    </div>
 </header>
+<!--/Header -->
 
 <!--Slider-->
 <div class="container">
@@ -68,7 +70,7 @@
       </div>
    </div>
 </div>
- <!--/Slider-->
+<!--/Slider-->
 
 <!-- Features -->
 <div class="container">
@@ -193,21 +195,43 @@
 <!--/Calc-->
 
 <!--Tab__menu-->
-
 <div class="calories">
    <div data-ratio="1200" id="low__calories" class="calories__btn calculating__choose-item_active">
       1200
-      <div class="calories__text">Калорий<br>больше или меньше</div></div>
+      <div class="calories__text">калорий<br>больше или меньше</div></div>
    <div data-ratio="1500" id="small__calories" class="calories__btn">
       1500
-      <div class="calories__text">Калорий<br> или больше</div></div>
+      <div class="calories__text">калорий<br> или больше</div></div>
    <div data-ratio="2000" id="medium__calories" class="calories__btn">
       2000
-      <div class="calories__text">Калорий<br> или больше</div></div>
+      <div class="calories__text">калорий<br> или больше</div></div>
    <div data-ratio="2500" id="high__calories" class="calories__btn">
       2500
-      <div class="calories__text">Калорий<br> или больше</div></div>
+      <div class="calories__text">калорий<br> или больше</div></div>
+
+   <!--<input type="radio" name="tab-btn" id="calories__btn-1" value="" checked>
+   <label class="tab__btn-1" for="calories__btn-1">
+      <h4>1200</h4>
+      <h5>калорий<br>больше или меньше</h5>
+   </label>
+   <input type="radio" name="tab-btn" id="calories__btn-2" value="">
+   <label class="tab__btn-1" for="calories__btn-2">
+      <h4>Fit</h4>
+      <h5>Правильное<br>и разнообразное</h5>
+   </label>
+   <input type="radio" name="tab-btn" id="calories__btn-3" value="" >
+   <label class="tab__btn-1" for="calories__btn-3">
+      <h4>Life</h4>
+      <h5>Премиальное<br> и здоровое</h5>
+   </label>
+   <input type="radio" name="tab-btn" id="calories__btn-4">
+   <label class="tab__btn-1" for="calories__btn-4">
+      <h4>Veg</h4>
+      <h5>Вегитарианское<br>питание</h5>
+   </label>-->
+
 </div>
+
 
 <div class="tabs">
    <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
@@ -225,145 +249,18 @@
       <h4>Life</h4>
       <h5>Премиальное<br> и здоровое</h5>
    </label>
-   <input type="radio" name="tab-btn" id="tab-btn-4" value="">
+   <input type="radio" name="tab-btn" id="tab-btn-4">
    <label class="tab__btn-1" for="tab-btn-4">
       <h4>Veg</h4>
       <h5>Вегитарианское<br>питание</h5>
    </label>
+   <input type="radio" name="tab-btn" id="tab-btn-5" value="">
+   <label class="tab__btn-1" for="tab-btn-5" style="display: none;">
+      <h4>Veg</h4>
+      <h5>Вегитарианское<br>питание</h5>
+   </label>
 
-
-   <div id="content-1">
-      <h3 class="menu__title">Ваше меню:</h3>
-      <h4 class="menu__price">SPORT 1 НЕДЕЛЯ
-         <span>1 131 ₽/ день</span></h4>
-      <div class="menu__example">Пример на день
-         <span>5 приемов / 7 блюд</span></div>
-      <div class="example">
-         <div class="example__item">
-            <img class="example__img" src="img/example/Sport/Борщ со свежей капустой с куриным филе.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Sport/Говядина-в-сливочно-томатном-соусе-с-грибами-и-спагетти-отварные.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Sport/Говядина-нашпигованная-и-рис-с-шафраном-под-сметанно-огуречным-соусом.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Sport/Омлет-с-курицей-и-сыром.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Sport/Пирог картофельный.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Sport/Детокс ягодный.png" alt="">
-         </div>
-      </div>
-      <div class="delivery__sport">Доставка пн-ср-пт в любой двухчасовой интервал с 6 до 12 утра</div>
-      <div class="clarification">Питание с понедельника по субботу</div>
-      <div class="price">Итого 6 дней<span>5649 ₽</span></div>
-      <button class="btn btn__example" data-modal>Заказать</button>
-   </div>
-
-   <div id="content-2">
-      <h3 class="menu__title">Ваше меню:</h3>
-      <h4 class="menu__price">FIT 1 НЕДЕЛЯ
-         <span>1 321 ₽/ день</span></h4>
-      <div class="menu__example">Пример на день
-         <span>5 приемов / 7 блюд</span></div>
-      <div class="example">
-         <div class="example__item">
-            <img class="example__img" src="img/example/Fit/Том-ям.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Fit/Цезарь-с-красной-рыбой.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Fit/Курица-терияки-и-фунчоза.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Fit/Сэндвич-с-творожным-сыром-и-ананасом.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Fit/Чахохблили-из-говядины-и-рис-отварной.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Fit/Пудинг-с-фруктовыми-дольками.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Fit/Ягодный-смузи-шейк.png" alt="">
-         </div>
-      </div>
-      <div class="delivery__sport">Доставка пн-ср-пт в любой двухчасовой интервал с 6 до 12 утра</div>
-      <div class="clarification">Питание с понедельника по субботу</div>
-      <div class="price">Итого 5 дней<span>6 603 ₽</span></div>
-      <button class="btn btn__example" data-modal>Заказать</button>
-   </div>
-
-   <div id="content-3">
-      <h3 class="menu__title">Ваше меню:</h3>
-      <h4 class="menu__price">LIFE 1 НЕДЕЛЯ
-         <span>2 090 ₽/ день</span></h4>
-      <div class="menu__example">Пример на день
-         <span>4 приема / 5 блюд</span></div>
-      <div class="example">
-         <div class="example__item">
-            <img class="example__img" src="img/example/Life/Том-ям.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Life/Салат-с-кукурузой,-куриным-филе-и-голландским-сыром.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Life/Куриные-ножки-в-горчично-соевом-маринаде-min.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Life/Индейка-в-йогуртовом-маринаде-с-тыквой-min.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Life/Тирамису.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Life/Томатный-фестиваль.png" alt="">
-         </div>
-      </div>
-      <div class="delivery__sport">Доставка пн-ср-пт в любой двухчасовой интервал с 6 до 12 утра</div>
-      <div class="clarification">Питание с понедельника по субботу</div>
-      <div class="price">Итого 5 дней<span>10 450 ₽</span></div>
-      <button class="btn btn__example" data-modal>Заказать</button>
-   </div>
-
-   <div id="content-4">
-      <h3 class="menu__title">Ваше меню:</h3>
-      <h4 class="menu__price">VEG 1 НЕДЕЛЯ
-         <span>1 615 ₽/ день</span></h4>
-      <div class="menu__example">Пример на день
-         <span>5 приемов / 6 блюд</span></div>
-      <div class="example">
-         <div class="example__item">
-            <img class="example__img" src="img/example/Veg/Крем-суп-кукурузный-с-гренками.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Veg/Блины-омлетные-с-сыром-творожным.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Veg/Желе-из-груши-с-апельсином.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Veg/Каша овсяная с бананом.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Veg/Каша-5-злаков-с-лесными-ягодами.png" alt="">
-         </div>
-         <div class="example__item">
-            <img class="example__img" src="img/example/Veg/Напиток вишневый.png" alt="">
-         </div>
-      </div>
-      <div class="delivery__sport">Доставка пн-ср-пт в любой двухчасовой интервал с 6 до 12 утра</div>
-      <div class="clarification">Питание с понедельника по субботу</div>
-      <div class="price">Итого 5 дней<span>8 075 ₽</span></div>
-      <button class="btn btn__example" data-modal>Заказать</button>
-   </div>
-
- </div>
+</div>
 <!--/Tab__menu-->
 
 <!--Modal-->
@@ -382,6 +279,7 @@
 </div>
 <!--/Modal-->
 
-   <script src="js/app.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 </html>
