@@ -247,19 +247,19 @@ const result = document.querySelector('.calculating__result span');
 
          elements.forEach(elem => {
             elem.addEventListener('click', (e) => {
-                  if (e.target.getAttribute('data-ratio')) {
-                     ratio = +e.target.getAttribute('data-ratio');
-                     localStorage.setItem('ratio', +e.target.getAttribute('data-ratio'));
+                  if (e.currentTarget.getAttribute('data-ratio')) {
+                     ratio = +e.currentTarget.getAttribute('data-ratio');
+                     localStorage.setItem('ratio', +e.currentTarget.getAttribute('data-ratio'));
                   } else {
-                     sex = e.target.getAttribute('id');
-                     localStorage.setItem('sex', e.target.getAttribute('id'));
+                     sex = e.currentTarget.getAttribute('id');
+                     localStorage.setItem('sex', e.currentTarget.getAttribute('id'));
                   }
 
                   elements.forEach(elem => {
                      elem.classList.remove(activeClass);
                   });
 
-                  e.target.classList.add(activeClass);
+                  e.currentTarget.classList.add(activeClass);
 
                   calcTotal();
             });
@@ -439,16 +439,6 @@ class MenuCard {
       this.srcFive = srcFive;
       this.price = price;
       this.parent = document.querySelector(parentSelector);
-      this.openModal = document.querySelectorAll ('[data-modal]');
-      this.openBtn ();
-   }
-
-   openBtn () {
-      this.openModal.forEach(item => {
-            item.addEventListener('click', () => {
-               openModal();
-            });
-         });
    }
 
    render() {
@@ -490,11 +480,11 @@ new MenuCard (
    "content-1",
    'SPORT 1 НЕДЕЛЯ<span>1 131 ₽/ день</span>',
    'Пример на день<span>5 приемов / 7 блюд</span>',
-   '"img/example/Sport/Борщ со свежей капустой с куриным филе.png"',
-   '"img/example/Sport/Говядина-в-сливочно-томатном-соусе-с-грибами-и-спагетти-отварные.png"',
-   '"img/example/Sport/Говядина-нашпигованная-и-рис-с-шафраном-под-сметанно-огуречным-соусом.png"',
-   '"img/example/Sport/Омлет-с-курицей-и-сыром.png"',
-   '"img/example/Sport/Детокс ягодный.png"',
+   '"img/example/Sport/1.png"',
+   '"img/example/Sport/2.png"',
+   '"img/example/Sport/3.png"',
+   '"img/example/Sport/4.png"',
+   '"img/example/Sport/5.png"',
    'Итого 6 дней<span>5649 ₽</span>',
    ".tabs"
 ).render();
@@ -504,11 +494,11 @@ new MenuCard (
    "content-2",
    'FIT 1 НЕДЕЛЯ<span>1 321 ₽/ день</span>',
    'Пример на день<span>5 приемов / 7 блюд</span>',
-   '"img/example/Fit/Том-ям.png"',
-   '"img/example/Fit/Цезарь-с-красной-рыбой.png"',
-   '"img/example/Fit/Курица-терияки-и-фунчоза.png"',
-   '"img/example/Fit/Сэндвич-с-творожным-сыром-и-ананасом.png"',
-   '"img/example/Fit/Ягодный-смузи-шейк.png"',
+   '"img/example/Fit/1.png"',
+   '"img/example/Fit/2.png"',
+   '"img/example/Fit/3.png"',
+   '"img/example/Fit/4.png"',
+   '"img/example/Fit/5.png"',
    'Итого 6 дней<span>5649 ₽</span>',
    ".tabs"
 ).render();
@@ -517,11 +507,11 @@ new MenuCard (
    "content-3",
    'LIFE 1 НЕДЕЛЯ<span>2 090 ₽/ день</span>',
    'Пример на день<span>4 приема / 5 блюд',
-   '"img/example/Life/Том-ям.png"',
-   '"img/example/Life/Салат-с-кукурузой,-куриным-филе-и-голландским-сыром.png"',
-   '"img/example/Life/Куриные-ножки-в-горчично-соевом-маринаде-min.png"',
-   '"img/example/Life/Индейка-в-йогуртовом-маринаде-с-тыквой-min.png"',
-   '"img/example/Life/Тирамису.png"',
+   '"img/example/Life/1.png"',
+   '"img/example/Life/2.png"',
+   '"img/example/Life/3.png"',
+   '"img/example/Life/4.png"',
+   '"img/example/Life/5.png"',
    'Итого 5 дней<span>10 450 ₽',
    ".tabs"
 ).render();
@@ -530,26 +520,30 @@ new MenuCard (
    "content-4",
    'VEG 1 НЕДЕЛЯ<span>1 615 ₽/ день</span>',
    'Пример на день<span>5 приемов / 6 блюд</span>',
-   '"img/example/Veg/Крем-суп-кукурузный-с-гренками.png"',
-   '"img/example/Veg/Блины-омлетные-с-сыром-творожным.png"',
-   '"img/example/Veg/Желе-из-груши-с-апельсином.png"',
-   '"img/example/Veg/Каша-5-злаков-с-лесными-ягодами.png"',
-   '"img/example/Veg/Напиток вишневый.png"',
+   '"img/example/Veg/1.png"',
+   '"img/example/Veg/2.png"',
+   '"img/example/Veg/3.png"',
+   '"img/example/Veg/4.png"',
+   '"img/example/Veg/5.png"',
    'Итого 5 дней<span>8 075 ₽',
    ".tabs"
 ).render();
 
-new MenuCard (
-   "content-5",
-   'VEG 1 НЕДЕЛЯ<span>1 615 ₽/ день</span>',
-   'Пример на день<span>5 приемов / 6 блюд</span>',
-   '"img/example/Veg/Крем-суп-кукурузный-с-гренками.png"',
-   '"img/example/Veg/Блины-омлетные-с-сыром-творожным.png"',
-   '"img/example/Veg/Желе-из-груши-с-апельсином.png"',
-   '"img/example/Veg/Каша-5-злаков-с-лесными-ягодами.png"',
-   '"img/example/Veg/Напиток вишневый.png"',
-   'Итого 5 дней<span>8 075 ₽',
-   ".tabs"
-).render();
+document.querySelectorAll('[data-modal]').forEach(item => {
+      item.addEventListener('click', () => {
+         openModal();
+      });
+   });
 
+
+   // Acordion
+
+   const acordionItem = document.querySelectorAll('.accordion__item');
+
+   acordionItem.forEach(item => {
+      item.classList.remove('active');
+      item.addEventListener('click', () => {
+         item.classList.toggle('active');
+      });
+   });
 });
