@@ -1,0 +1,85 @@
+.try {
+   display: flex;
+   background-color: #f7f7f7;
+   position: relative;
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      margin: 100px 0;
+   }
+
+   &__descr {
+      text-align: left;
+      font-size: 15px;
+      font-weight: 400;
+      color: #617283;
+      padding: 45px;
+      width: 45%;
+      height: auto;
+   }
+
+
+   &__title {
+      font-size: 32px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 20px;
+   }
+
+   .try__baner {
+      width: 55%;
+      height: auto;
+      background-color: #75ac6c;
+      border-radius: 25px;
+      padding: 45px;
+      position: relative;
+   }
+
+   .try__baner--title {
+      font-size: 32px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 20px;
+   }
+
+   .try__baner--text {
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 20px;
+      width: 30%;
+      height: auto;
+   }
+
+   .baner__img {
+      display: block;
+      width: 35%;
+      height: auto;
+      position: absolute;
+      top: 25%;
+      right: 0;
+      z-index: 1000;
+   }
+
+   .try__btn {
+      background-color: transparent;
+      border: 1px solid #fff;
+
+      &:hover {
+         background-color: #fff;
+         color: #75ac6c;
+      }
+   }
+
+   .try__price {
+      position: absolute;
+      bottom: 18%;
+      left: 47%;
+      z-index: 1050;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+   }
+
+}
