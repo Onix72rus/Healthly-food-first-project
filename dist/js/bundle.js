@@ -124,8 +124,6 @@ function calculator (resultSelector, lowCalId, smallCalId, mediumCalId, highCalI
                } else if (result.innerHTML >= '2500') {
                   highCal.classList.add(activeClass);
                }
-               }).then (() => {
-                  btnTriger ();
                }).catch(()=>{
                   alert('Произошла ошибка');
                });
